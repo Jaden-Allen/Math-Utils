@@ -4,15 +4,15 @@
 Npm Packages
 
 
-<details>
-    <summary>Npm Packages</summary>
-        <br>
-            ###### Latest Version
-            npm i @jadenallen/math_utils
-            ###### Version 1.0.2
-            npm i npm i @jadenallen/math_utils@1.0.2
-            ###### Version 1.0.1
-                npm i @jadenallen/math_utils@1.0.1
-            ###### Version 1.0.0
-            npm i @jadenallen/math_utils@1.0.0
+<details markdown="1">
+<summary>Npm Packages</summary>
+<br>
+###### Latest Version
+npm i @jadenallen/math_utils
+###### Version 1.0.2
+npm i @jadenallen/math_utils@1.0.2
+###### Version 1.0.1
+npm i @jadenallen/math_utils@1.0.1
+###### Version 1.0.0
+npm i @jadenallen/math_utils@1.0.0
 </details>
