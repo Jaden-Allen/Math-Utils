@@ -1,2 +1,2 @@
-##
-<tab><tab>npm i @jadenallen/math_utils
+###### Install
+    npm i @jadenallen/math_utils
