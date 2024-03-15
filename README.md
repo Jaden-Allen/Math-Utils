@@ -5,9 +5,8 @@ The Math Utils Package contains many Vector Math functions and regular base func
 
 <div style="font-size:2em;text-align:left">Vector3</div>
 A class used for making vectors with 3 positions. X, Y and Z
-<div style="white-space: pre-wrap;text-align:left"> 
+<div style="background-color: #2B2B2B; width: 1223/2px; height: 870/2px; border-radius: 10px; padding: 10px;text-align:center">
 <img src="https://raw.githubusercontent.com/Jaden-Allen/Math-Utils/preview/src/img/images.jpg" alt="Functions for making vector math simplified">
-
 </div>
 </div>
 </div>
