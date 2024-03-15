@@ -1,9 +1,3 @@
-###### Install
-    npm i @jadenallen/math_utils
-
-Npm Packages
-
-
 <details markdown="1">
 <summary>Npm Packages</summary>
 ###### Latest Version
