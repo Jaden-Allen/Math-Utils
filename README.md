@@ -1,14 +1,8 @@
-<div style="text-align:center;">
-<span style="font-size:2em;">Math Utils</span>
+
+Math Utils
 <div>
 The Math Utils Package contains many Vector Math functions and regular base functions. It offers a full Vector3 class that handles 3 dimensional coordinate systems.
-
-<div style="font-size:2em;text-align:left">Vector3</div>
-A class used for making vectors with 3 positions. X, Y and Z
-<div style="background-color: #2B2B2B; width: 100%; height: 100%; border-radius: 10px; padding: 10px;text-align:center">
-<img src="https://raw.githubusercontent.com/Jaden-Allen/Math-Utils/preview/src/img/images.jpg" alt="Functions for making vector math simplified">
-</div>
-</div>
+<img src="https://raw.githubusercontent.com/Jaden-Allen/Math-Utils/preview/src/img/images.png" alt="Functions for making vector math simplified">
 </div>
 
 <details><summary><span style="font-size:1.5em;">Npm Packages</span> </summary>
