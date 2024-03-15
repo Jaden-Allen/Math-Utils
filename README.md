@@ -6,7 +6,6 @@ Npm Packages
 
 <details markdown="1">
 <summary>Npm Packages</summary>
-<br>
 ###### Latest Version
 npm i @jadenallen/math_utils
 ###### Version 1.0.2
