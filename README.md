@@ -2,7 +2,6 @@
 Math Utils
 <div>
 The Math Utils Package contains many Vector Math functions and regular base functions. It offers a full Vector3 class that handles 3 dimensional coordinate systems.
-
 <img src="https://raw.githubusercontent.com/Jaden-Allen/Math-Utils/preview/src/img/images.png" alt="Functions for making vector math simplified">
 </div>
 
