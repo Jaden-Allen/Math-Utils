@@ -1,1 +1,1 @@
-import {Vector3} from "../@jadenallen/math_utils/index"
+import {Vector3} from "../@jadenallen/math_utils/index";
