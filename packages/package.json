@@ -1,6 +1,6 @@
 {
   "name": "@jadenallen/math_utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Adds Vector math and other math functions",
   "main": "index.ts",
   "contributors": [
