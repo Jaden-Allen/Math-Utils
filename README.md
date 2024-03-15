@@ -1,1 +1,2 @@
-npm install: ```npm i @jadenallen/math_utils```
+##
+<tab><tab>npm i @jadenallen/math_utils
