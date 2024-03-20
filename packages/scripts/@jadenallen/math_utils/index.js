@@ -1,8 +1,8 @@
 export class Vector3{
-    x: number = 0;
-    y: number = 0;
-    z: number = 0;
-    constructor(x: number,y: number,z: number){
+    /** @type {number}*/x = 0;
+    /** @type {number}*/y = 0;
+    /** @type {number}*/z = 0;
+    constructor(/** @type {number}*/x,/** @type {number}*/y,/** @type {number}*/z){
         this.x = x;
         this.y = y;
         this.z = z;
@@ -23,7 +23,7 @@ export class Vector3{
     *
     *let addedValue = Vector3.add(pos1, pos2); // Returns new Vector3(1, 2, 1)
     */
-    static add(pos1: Vector3, pos2: Vector3){
+    static add(/** @type {Vector3}*/pos1, /** @type {Vector3}*/pos2){
         return new Vector3(pos1.x + pos2.x, pos1.y + pos2.y, pos1.z + pos2.z);
     }
     /**
@@ -41,7 +41,7 @@ export class Vector3{
     *
     *let subtractedValue = Vector3.subtract(pos1, pos2); // Returns new Vector3(1, 0, 1)
     */
-    static subtract(pos1: Vector3, pos2: Vector3){
+    static subtract(/** @type {Vector3}*/pos1, /** @type {Vector3}*/pos2){
         return new Vector3(pos1.x - pos2.x, pos1.y - pos2.y, pos1.z - pos2.z);
     }
     /**
@@ -59,7 +59,7 @@ export class Vector3{
     *
     *let dividedValue = Vector3.divide(pos1, pos2); // Returns new Vector3(0.5, 0.5, 0.5)
     */
-    static divide(pos1: Vector3, pos2: Vector3){
+    static divide(/** @type {Vector3}*/pos1, /** @type {Vector3}*/pos2){
         return new Vector3(pos1.x / pos2.x, pos1.y / pos2.y, pos1.z / pos2.z);
     }
     /**
@@ -77,7 +77,7 @@ export class Vector3{
     *
     *let multipliedValue = Vector3.times(pos1, multiplier); // Returns new Vector3(5, 5, 5)
     */
-    static times(pos1: Vector3, num: number){
+    static times(/** @type {Vector3}*/pos1, /** @type {Vector3}*/num){
         return new Vector3(pos1.x * num, pos1.y * num, pos1.z * num);
     }
     /**
@@ -95,7 +95,7 @@ export class Vector3{
     *
     *let multipliedValue = Vector3.multiply(pos1, pos2); // Returns new Vector3(0, 2, 0)
     */
-    static multiply(pos1: Vector3, pos2: Vector3){
+    static multiply(/** @type {Vector3}*/pos1, /** @type {Vector3}*/pos2){
         return new Vector3(pos1.x * pos2.x, pos1.y * pos2.y, pos1.z * pos2.z);
     }
     /**
@@ -113,7 +113,7 @@ export class Vector3{
     *
     *let check = Vector3.Equals(pos1, pos2); // Returns false
     */
-    static Equals(pos1: Vector3, pos2: Vector3){
+    static Equals(/** @type {Vector3}*/pos1, /** @type {Vector3}*/pos2){
         if (pos1.x == pos2.x && pos1.y == pos2.y && pos1.z == pos2.z){
             return true;
         }
@@ -193,7 +193,7 @@ export class Vector3{
     *   
     *let distance = Vector3.Distance(pos1, pos2); // Returns 1
     */
-    static Distance(Pos1: Vector3, Pos2: Vector3){
+    static Distance(/** @type {Vector3}*/Pos1, /** @type {Vector3}*/Pos2){
         return (Math.abs(Pos1.x - Pos2.x) + 1) + (Math.abs(Pos1.y - Pos2.y) + 1) + (Math.abs(Pos1.z - Pos2.z) + 1);
     }
     /**
@@ -212,7 +212,7 @@ export class Vector3{
     *const endPos = new Vector3(0, 10, 0);
     *let newPos = Vector3.Lerp(newPos, endPos, 0.5) // Returns (0, 5, 0)
     */
-    static Lerp(Pos1: Vector3, Pos2: Vector3, tParam: number){
+    static Lerp(/** @type {Vector3}*/Pos1, /** @type {Vector3}*/Pos2, /** @type {number}*/tParam){
         let x = Pos1.x + (Pos2.x - Pos1.x) * tParam;
         let y = Pos1.y + (Pos2.y - Pos1.y) * tParam;
         let z = Pos1.z + (Pos2.z - Pos1.z) * tParam;
@@ -221,19 +221,19 @@ export class Vector3{
     }
 }
 export class Vector3Int{
-    x: number = 0;
-    y: number = 0;
-    z: number = 0;
+    /** @type {number}*/x = 0;
+    /** @type {number}*/y = 0;
+    /** @type {number}*/z = 0;
 
-    constructor(x: number,y: number,z: number){
+    constructor(/** @type {number}*/x,/** @type {number}*/y,/** @type {number}*/z){
         this.x = x;
         this.y = y;
         this.z = z;
     }
-    Distance(Pos1: Vector3, Pos2: Vector3){
+    Distance(/** @type {Vector3}*/Pos1, /** @type {Vector3}*/Pos2){
         return (Math.abs(Pos1.x - Pos2.x) + 1) + (Math.abs(Pos1.y - Pos2.y) + 1) + (Math.abs(Pos1.z - Pos2.z) + 1);
     }
-    Lerp(Pos1: Vector3, Pos2: Vector3, tParam: number){
+    Lerp(/** @type {Vector3}*/Pos1, /** @type {Vector3}*/Pos2, /** @type {number}*/tParam){
         let x = Pos1.x + (Pos2.x - Pos1.x) * tParam;
         let y = Pos1.y + (Pos2.y - Pos1.y) * tParam;
         let z = Pos1.z + (Pos2.z - Pos1.z) * tParam;
@@ -256,7 +256,7 @@ export class Mathf{
     * @example 
     *let clampedVal = Mathf.Clamp(10, -10, 5) // Returns 5
     */
-    static Clamp(value: number, min: number, max: number){
+    static Clamp(/** @type {number}*/value, /** @type {number}*/min, /** @type {number}*/max){
         if (value >= min && value <= max) {return value};
         if (value >= max) { return max};
         if (value <= min) {return min};
@@ -276,7 +276,7 @@ export class Mathf{
     *const speed = 0;
     *let newSpeed = Mathf.Lerp(speed, 10, 0.5) // Returns 5
     */
-    static Lerp(a: number, b: number, tParam: number){
+    static Lerp(/** @type {number}*/a, /** @type {number}*/b, /** @type {number}*/tParam){
         return a + (b - a) * tParam;
     }
     /**
@@ -290,7 +290,7 @@ export class Mathf{
     *const negativeVal = -10;
     *let positiveVal = Mathf.Abs(negativeVal);  // Returns 10
     */
-    static Abs(value: number){
+    static Abs(/** @type {number}*/value){
         if (value < 0){ return value * -1}
         else return value;
     }
@@ -311,7 +311,7 @@ export class Random{
     * @example 
     *let randomVal = Random.Range(0, 10);
     */
-    static Range(min: number, max: number){
+    static Range(/** @type {number}*/min, /** @type {number}*/max){
         
         return Mathf.Lerp(min, max, Math.random());
     }
@@ -328,7 +328,7 @@ export class Random{
 * @example 
 *let minMax = GetMinMax(new Vector3(10, 20, 20), new Vector3(20, 10, 10))  // Returns [Vector3(10, 10, 10), Vector3(20, 20, 20)]
 */
-export function GetMinMax(pos1: Vector3, pos2: Vector3){
+export function GetMinMax(/** @type {Vector3}*/pos1, /** @type {Vector3}*/pos2){
     let minPos = new Vector3(0, 0, 0);
     let maxPos = new Vector3(0, 0, 0);
 
