@@ -16,7 +16,7 @@ The Math Utils Package contains many Vector Math functions and regular base func
 ###### Version 1.0.1
     npm i @jadenallen/math_utils@1.0.1
 ###### Version 1.0.0
-    npm i @jadenallen/math_utils@1.0.0
+    npm i @jadenallen/math_utils@1.0.0 
 </details>
 
 <details><summary><span style="font-size:1.5em;">Copyright</span></summary>
