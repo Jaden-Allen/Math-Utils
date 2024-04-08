@@ -5,19 +5,9 @@ The Math Utils Package contains many Vector Math functions and regular base func
 <img src="https://raw.githubusercontent.com/Jaden-Allen/Math-Utils/preview/src/img/images.png" alt="Functions for making vector math simplified">
 </div>
 
-<details><summary><span style="font-size:1.5em;">Npm Packages</span> </summary>
 
-###### Latest Version (Version 1.0.4)
+###### Latest Version (Version 1.0.6)
     npm i @jadenallen/math_utils
-###### Version 1.0.3
-    npm i npm i @jadenallen/math_utils@1.0.3
-###### Version 1.0.2
-    npm i npm i @jadenallen/math_utils@1.0.2
-###### Version 1.0.1
-    npm i @jadenallen/math_utils@1.0.1
-###### Version 1.0.0
-    npm i @jadenallen/math_utils@1.0.0 
-</details>
 
 <details><summary><span style="font-size:1.5em;">Copyright</span></summary>
 
