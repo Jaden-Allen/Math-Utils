@@ -1,18 +1,11 @@
-<<<<<<< Updated upstream
-##
-<tab><tab> npm i @jadenallen/math_utils
-=======
-
 Math Utils
 <div>
 The Math Utils Package contains many Vector Math functions and regular base functions. It offers a full Vector3 class that handles 3 dimensional coordinate systems.
 <img src="https://raw.githubusercontent.com/Jaden-Allen/Math-Utils/preview/src/img/images.png" alt="Functions for making vector math simplified">
 </div>
 
-###### Latest Version (Version 1.0.6)
+###### Latest Version (Version 1.0.4)
     npm i @jadenallen/math_utils
-
-<details><summary><span style="font-size:1.5em;">Copyright</span></summary>
 
 ```
 MIT License
@@ -38,4 +31,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 </details>
->>>>>>> Stashed changes
