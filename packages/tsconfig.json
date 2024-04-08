@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"moduleResolution": "node",
+		"module": "es2022",
+		"declaration": false,
+		"noLib": false,
+		"emitDecoratorMetadata": false,
+		"experimentalDecorators": true,
+		"sourceMap": false,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"checkJs": true,
+		"allowUnreachableCode": true,
+		"allowUnusedLabels": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": false,
+		"noImplicitUseStrict": false,
+		"outDir": "scripts/",
+		"rootDir": "src/",
+		"baseUrl": "src/",
+		"listFiles": false,
+		"noEmitHelpers": true,
+		"removeComments": false,
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.js"
+	],
+	"exclude": [
+		"node_modules/**/*",
+		"scripts/**/*"
+	],
+	"compileOnSave": false
+}
