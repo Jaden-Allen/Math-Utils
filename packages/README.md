@@ -4,7 +4,7 @@ The Math Utils Package contains many Vector Math functions and regular base func
 <img src="https://raw.githubusercontent.com/Jaden-Allen/Math-Utils/preview/src/img/images.png" alt="Functions for making vector math simplified">
 </div>
 
-###### Latest Version (Version 1.0.4)
+###### Latest Version (Version 1.0.6)
     npm i @jadenallen/math_utils
 
 ```
