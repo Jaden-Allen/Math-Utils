@@ -9,17 +9,6 @@ The Math Utils Package contains many Vector Math functions and regular base func
 ###### Latest Version (Version 1.0.6)
     npm i @jadenallen/math_utils
 
-<details><summary><span style="font-size:1.5em;">Vector3</span></summary>
-
-
-<div>Constructor</div>
-<div>new Vector3(x, y, z) </div>
-<div></div>
-<div>Functions</div>
-<div>Vector3.Zero()</div>
-<div>Vector3.One()</div>
-
-</details>
 
 <details><summary><span style="font-size:1.5em;">Copyright</span></summary>
 
