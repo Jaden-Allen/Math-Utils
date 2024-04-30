@@ -27,6 +27,22 @@ export class Vector3{
         return new Vector3(pos1.x + pos2.x, pos1.y + pos2.y, pos1.z + pos2.z);
     }
     /**
+    *Adds 2 Vector3's together
+    *@param otherPos
+    *The other Vector3
+    *@return
+    *Returns a Vector3 with the inputs added together
+    *
+    * @example 
+    *const pos1 = new Vector3(1, 1, 1);
+    *const pos2 = new Vector3(0, 1, 0);
+    *
+    *let addedValue = pos1.add(pos2); // Returns new Vector3(1, 2, 1)
+    */
+    add(/** @type {Vector3}*/otherPos){
+        return new Vector3(this.x + otherPos.x, this.y + otherPos.y, this.z + otherPos.z);
+    }
+    /**
     *Subtracts a Vector3 from another Vector3
     *@param pos1
     *The first Vector3
@@ -43,6 +59,22 @@ export class Vector3{
     */
     static Subtract(/** @type {Vector3}*/pos1, /** @type {Vector3}*/pos2){
         return new Vector3(pos1.x - pos2.x, pos1.y - pos2.y, pos1.z - pos2.z);
+    }
+    /**
+    *Subtracts a Vector3 from another Vector3
+    *@param otherPos
+    *The other Vector3
+    *@return
+    *Returns a Vector3 with vectors values subtracted by otherPos
+    *
+    * @example 
+    *const pos1 = new Vector3(1, 1, 1);
+    *const pos2 = new Vector3(0, 1, 0);
+    *
+    *let subtractedValue = pos1.subtract(pos2); // Returns new Vector3(1, 0, 1)
+    */
+    subtract(/** @type {Vector3}*/otherPos){
+        return new Vector3(this.x - otherPos.x, this.y - otherPos.y, this.z - otherPos.z);
     }
     /**
     *Divides a Vector3 by another Vector3
@@ -63,6 +95,22 @@ export class Vector3{
         return new Vector3(pos1.x / pos2.x, pos1.y / pos2.y, pos1.z / pos2.z);
     }
     /**
+    *Divides a Vector3 by another Vector3
+    *@param otherPos
+    *The other Vector3
+    *@return
+    *Returns a Vector3 with pos1's values divided by pos2's values
+    *
+    * @example 
+    *const pos1 = new Vector3(2, 2, 2);
+    *const pos2 = new Vector3(4, 4, 4);
+    *
+    *let dividedValue = pos1.divide(pos2); // Returns new Vector3(0.5, 0.5, 0.5)
+    */
+    divide(/** @type {Vector3}*/otherPos){
+        return new Vector3(this.x / otherPos.x, this.y / otherPos.y, this.z / otherPos.z);
+    }
+    /**
     *Multiplies a Vector3 with a number
     *@param pos1
     *The first Vector3
@@ -81,6 +129,22 @@ export class Vector3{
         return new Vector3(pos1.x * num, pos1.y * num, pos1.z * num);
     }
     /**
+    *Multiplies a Vector3 with a number
+    *@param scale
+    *The Number
+    *@return
+    *Returns a Vector3 with pos1's values multiplied by the scale
+    *
+    * @example 
+    *const pos1 = new Vector3(1, 1, 1);
+    *const scale = 5
+    *
+    *let multipliedValue = pos1.scale(scale); // Returns new Vector3(5, 5, 5)
+    */
+    scale(/** @type {Vector3}*/scale){
+        return new Vector3(this.x * scale, this.y * scale, this.z * scale);
+    }
+    /**
     *Multiplies 2 Vector3's
     *@param pos1
     *The first Vector3
@@ -97,6 +161,22 @@ export class Vector3{
     */
     static Multiply(/** @type {Vector3}*/pos1, /** @type {Vector3}*/pos2){
         return new Vector3(pos1.x * pos2.x, pos1.y * pos2.y, pos1.z * pos2.z);
+    }
+    /**
+    *Multiplies 2 Vector3's
+    *@param otherPos
+    *The other Vector3
+    *@return
+    *Returns a Vector3 with the inputs multiplied
+    *
+    * @example 
+    *const pos1 = new Vector3(1, 1, 1);
+    *const pos2 = new Vector3(0, 2, 0);
+    *
+    *let multipliedValue = pos1.multiply(pos1, pos2); // Returns new Vector3(0, 2, 0)
+    */
+    multiply(/** @type {Vector3}*/otherPos){
+        return new Vector3(this.x * otherPos.x, this.y * otherPos.y, this.z * otherPos.z);
     }
     /**
     *Checks if 2 Vector3s are the same
@@ -129,6 +209,34 @@ export class Vector3{
         }
     }
 
+    /**
+    *Checks if 2 Vector3s are the same
+    *@param otherPos
+    *The second Vector3
+    *@param tolerance
+    *The range that the floats can differ
+    *@return
+    *Returns true if the Vector3's are the same otherwise it will return false
+    *
+    * @example 
+    *const pos1 = new Vector3(0, 0, 1);
+    *const pos2 = new Vector3(0, 0, 1.05);
+    *
+    *let check = pos1.equals(pos2, 0.1); // Returns true
+    */
+    equals(/** @type {Vector3}*/otherPos, /**@type {number}*/ tolerance){
+        if (tolerance == undefined){
+            if (this.x == otherPos.x && this.y == otherPos.y && this.z == otherPos.z){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return Math.abs(this.x - otherPos.x) <= tolerance && Math.abs(this.y - otherPos.y) <= tolerance && Math.abs(this.z - otherPos.z) <= tolerance;
+        }
+    }
     /**
     *Returns a Vector3 at 0, 0, 0
     * @example 
@@ -268,40 +376,34 @@ export class Vector3{
     }
     /**
     *Gets the magnitude of a vector
-    *@param pos1
-    *The Vector3
     *@return
     *Returns the length of a vector
     *
     * @example 
     *const pos = new Vector3(2, 2, 2);
     *   
-    *let mag = Vector3.Magnitude(pos); // Returns ~3.464
+    *let mag = pos.magnitude(); // Returns ~3.464
     */
-    static Magnitude(/** @type {Vector3}*/pos){
-        return Math.sqrt(pos.x * pos.x + pos.y * pos.y + pos.z * pos.z);
+    magnitude(){
+        return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
     }
     /**
     *Gets the square magnitude of a vector
-    *@param pos1
-    *The Vector3
     *@return
     *Returns the squared length of a vector
     *
     * @example 
     *const pos = new Vector3(2, 2, 2);
     *   
-    *let sqrMag = Vector3.SqrMagnitude(pos); // Returns 12
+    *let sqrMag = pos.sqrMagnitude(); // Returns 12
     */
-    static SqrMagnitude(/** @type {Vector3}*/pos){
-        return pos.x * pos.x + pos.y * pos.y + pos.z * pos.z;
+    sqrMagnitude(){
+        return this.x * this.x + this.y * this.y + this.z * this.z;
     }
     /**
     *Gets the squared distance between 2 vectors
-    *@param pos1
-    *The first Vector3
-    *@param pos1
-    *The second Vector3
+    *@param otherPos
+    *The other Vector3
     *@return
     *Returns the squared distance between 2 vectors
     *
@@ -309,31 +411,29 @@ export class Vector3{
     *const pos1 = new Vector3(2, 2, 2);
     *const pos2 = new Vector3(0, 0, 0);
     *   
-    *let sqrDst = Vector3.SqrDistance(pos1, pos2); // Returns 12
+    *let sqrDst = pos1.sqrDistance(pos2); // Returns 12
     */
-    static SqrDistance(/** @type {Vector3}*/pos1, /** @type {Vector3}*/pos2){
-        const dx = pos2.x - pos1.x;
-        const dy = pos2.y - pos1.y;
-        const dz = pos2.z - pos1.z;
+    sqrDistance(/** @type {Vector3}*/otherPos){
+        const dx = otherPos.x - this.x;
+        const dy = otherPos.y - this.y;
+        const dz = otherPos.z - this.z;
 
         return dx * dx + dy * dy + dz * dz;
     }
     /**
     *Normalizes the vector
-    *@param dir
-    *The first Vector3
     *@return
     *Returns the normalized Vector
     *
     * @example 
     *const dir = new Vector3(2, 1, 2);
     *   
-    *let normalizedDir = Vector3.Normalize(dir); // Returns new Vector3(0.6666, 0.3333, 0.6666)
+    *let normalizedDir = dir.normalize(); // Returns new Vector3(0.6666, 0.3333, 0.6666)
     */
-    static Normalize(/** @type {Vector3}*/dir){
-        const mag = Vector3.Magnitude(dir);
+    normalize(){
+        const mag = Vector3.Magnitude(this);
         if (mag !== 0){
-            return new Vector3(dir.x / mag, dir.y / mag, dir.z / mag);
+            return new Vector3(this.x / mag, this.y / mag, this.z / mag);
         }
         else{
             return new Vector3(0, 0, 0);
